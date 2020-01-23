@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import {Link as LinkRoute} from "react-router-dom";
+import { Link as LinkRoute } from "react-router-dom";
 let images = {
   Tetris: require('../img/Tetris.PNG'),
 }
@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
 function Game(gameKey, gameName, gameDescription) {
   const classes = useStyles();
   var img = images[gameName];
-  var ruta="/"+gameName;
+  var ruta = "/" + gameName;
   return (
     <Container className={classes.cardGrid} maxWidth="md">
       {/* End hero unit */}
@@ -87,8 +87,8 @@ function Game(gameKey, gameName, gameDescription) {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" color="primary">
-              <LinkRoute to={ruta}>Home</LinkRoute>
+              <Button size="small" color="primary" href={ruta}>
+                Jugar
               </Button>
             </CardActions>
           </Card>

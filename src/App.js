@@ -1,28 +1,17 @@
 import React from 'react';
 import Tetris from './components/Tetris';
 import HomePage from './components/HomePage';
-import {
-  BrowserRouter,
-  Switch,
-  Route
-} from "react-router-dom";
-console.log(window.location.pathname);
-function enrutar(){
-  
+var ruta = window.location.pathname;
+var renderizado;
+if (ruta == "/") {
+  renderizado = <HomePage />;
+} else if (ruta == "/Tetris") {
+  renderizado = <Tetris />;
 }
+
 const App = () => (
-  
   <div className="App">
-    <BrowserRouter>
-      <Switch>
-        <Route path="">
-          <HomePage />
-        </Route>
-        <Route path="/Tetris">
-          <Tetris />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    {renderizado}
   </div>
 );
 
