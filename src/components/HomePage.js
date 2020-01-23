@@ -75,7 +75,6 @@ function Game(gameKey, gameName, gameDescription) {
               className={classes.cardMedia}
               image={img}
               title="Image title"
-
             />
             <CardContent className={classes.cardContent}>
               <Typography gutterBottom variant="h5" component="h2">

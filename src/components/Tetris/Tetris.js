@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createStage, checkCollision } from '../../gameHelpers';
+import { createStage, checkCollision } from './gameHelpers';
 //Hooks
 import { usePlayer } from '../../hooks/usePlayer';
 import { useStage } from '../../hooks/useStage';
