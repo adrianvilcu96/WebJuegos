@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 let images = {
   Tetris: require('../img/Tetris.PNG'),
+  Memory: require('../img/Memory.PNG'),
 }
 function Copyright() {
   return (
@@ -112,6 +113,7 @@ export default function Album() {
       </AppBar>
       <main>
         {Game(1, "Tetris", "Tetris es un videojuego de puzzle originalmente diseñado y programado por Alekséi Pázhitnov en la Unión Soviética. ")}
+        {Game(2, "Memory", "Memory es un juego que ayuda al entendimiento del cerebro, que trata de encontrar cartas parejas en una serie de cartas.")}
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
