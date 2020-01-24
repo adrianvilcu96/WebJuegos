@@ -60,6 +60,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
+  main:{
+    display: 'flex',
+    flexDirection: 'row',
+  },
 }));
 
 function Game(gameKey, gameName, gameDescription) {
@@ -67,7 +71,7 @@ function Game(gameKey, gameName, gameDescription) {
   var img = images[gameName];
   var ruta = "/" + gameName;
   return (
-    <Container className={classes.cardGrid} maxWidth="md">
+    <Container className={classes.cardGrid} maxWidth="md" >
       {/* End hero unit */}
       <Grid container spacing={4}>
         <Grid item key={gameKey} xs={12} sm={6} md={4}>
@@ -105,23 +109,23 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
-            Album layout
+            Juegos3GAG
           </Typography>
         </Toolbar>
       </AppBar>
       <main>
         {Game(1, "Tetris", "Tetris es un videojuego de puzzle originalmente diseñado y programado por Alekséi Pázhitnov en la Unión Soviética. ")}
         {Game(2, "Memory", "Memory es un juego que ayuda al entendimiento del cerebro, que trata de encontrar cartas parejas en una serie de cartas.")}
+        {Game(3, "Alvaro", "Juego realizado por alvaro ")}
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          JUEGOS3GAG
         </Typography>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Something here to give the footer a purpose!
+          Pagina de juegos realizada para la asignatura de DWEC
         </Typography>
         <Copyright />
       </footer>
