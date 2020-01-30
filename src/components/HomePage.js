@@ -57,14 +57,11 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   footer: {
-    backgroundColor: theme.palette.background.paper,
+    color: 'white',
     padding: theme.spacing(6),
     fontSize: 12,
   },
-  main: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
+  
 }));
 
 function Game(gameKey, gameName, gameDescription) {
@@ -106,12 +103,12 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap paragraph>
+          <Typography variant="h4" color="inherit"  noWrap paragraph>
             Juegos3GAG
           </Typography>
         </Toolbar>
       </AppBar>
-      <main style={{backgroundColor: "lightblue"}}>
+      <main >
         <Container className={classes.cardGrid} maxWidth="md" >
           {/* End hero unit */}
           <Grid container spacing={4}>
