@@ -59,8 +59,9 @@ const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
+    fontSize: 12,
   },
-  main:{
+  main: {
     display: 'flex',
     flexDirection: 'row',
   },
@@ -71,35 +72,31 @@ function Game(gameKey, gameName, gameDescription) {
   var img = images[gameName];
   var ruta = "/" + gameName;
   return (
-    <Container className={classes.cardGrid} maxWidth="md" >
-      {/* End hero unit */}
-      <Grid container spacing={4}>
-        <Grid item key={gameKey} xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              image={img}
-              title="Image title"
-            />
-            <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h5" component="h2">
-                {gameName}
-              </Typography>
-              <Typography>
-                {gameDescription}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary" href={ruta}>
-                Jugar
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      </Grid>
-    </Container>
-  )
 
+    <Grid item key={gameKey} xs={12} sm={6} md={4}>
+      <Card className={classes.card}>
+        <CardMedia
+          className={classes.cardMedia}
+          image={img}
+          title="Image title"
+        />
+        <CardContent className={classes.cardContent}>
+          <Typography gutterBottom variant="h5" component="h2">
+            {gameName}
+          </Typography>
+          <Typography>
+            {gameDescription}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small" color="primary" href={ruta}>
+            Jugar
+              </Button>
+        </CardActions>
+      </Card>
+    </Grid>
+
+  )
 }
 export default function Album() {
   const classes = useStyles();
@@ -109,15 +106,20 @@ export default function Album() {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
+          <Typography variant="h6" color="inherit" noWrap paragraph>
             Juegos3GAG
           </Typography>
         </Toolbar>
       </AppBar>
-      <main>
-        {Game(1, "Tetris", "Tetris es un videojuego de puzzle originalmente diseñado y programado por Alekséi Pázhitnov en la Unión Soviética. ")}
-        {Game(2, "Memory", "Memory es un juego que ayuda al entendimiento del cerebro, que trata de encontrar cartas parejas en una serie de cartas.")}
-        {Game(3, "Alvaro", "Juego realizado por alvaro ")}
+      <main style={{backgroundColor: "lightblue"}}>
+        <Container className={classes.cardGrid} maxWidth="md" >
+          {/* End hero unit */}
+          <Grid container spacing={4}>
+            {Game(1, "Tetris", "Tetris es un videojuego de puzzle originalmente diseñado y programado por Alekséi Pázhitnov en la Unión Soviética. ")}
+            {Game(2, "Memory", "Memory es un juego que ayuda al entendimiento del cerebro, que trata de encontrar cartas parejas en una serie de cartas.")}
+            {Game(3, "Alvaro", "Juego realizado por alvaro ")}
+          </Grid>
+        </Container>
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
