@@ -11,7 +11,7 @@ import { StyledTetris, StyledTetrisWrapper } from './styles/StyledTetris'
 import Stage from './Stage';
 import Display from './Display';
 import StartButton from './StartButton';
-
+import Header from './Header';
 const Tetris = () => {
     const [dropTime, setDropTime] = useState(null);
     const [gameOver, setGameOver] = useState(false);
@@ -92,12 +92,15 @@ const Tetris = () => {
         }
     };
     return (
+
         <StyledTetrisWrapper
             role="button"
             tabIndex="0"
             onKeyDown={e => move(e)}
             onKeyUp={keyUp}
         >
+            <Header>
+            </Header>
             <StyledTetris>
                 <Stage stage={stage} />
                 <aside>
