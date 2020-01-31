@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { createStage, checkCollision } from './gameHelpers';
 //Hooks
-import { usePlayer } from '../../hooks/usePlayer';
-import { useStage } from '../../hooks/useStage';
-import { useInterval } from '../../hooks/useInterval'
-import { useGameStatus } from '../../hooks/useGameStatus'
+import { usePlayer } from './hooks/usePlayer';
+import { useStage } from './hooks/useStage';
+import { useInterval } from './hooks/useInterval'
+import { useGameStatus } from './hooks/useGameStatus'
 
 import { StyledTetris, StyledTetrisWrapper } from './styles/StyledTetris'
 //Components
