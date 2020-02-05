@@ -114,7 +114,7 @@ export default function Album() {
           <Grid container spacing={4}>
             {Game(1, "Tetris", "Tetris es un videojuego de puzzle originalmente diseñado y programado por Alekséi Pázhitnov en la Unión Soviética. ")}
             {Game(2, "Memory", "Memory es un juego que ayuda al entendimiento del cerebro, que trata de encontrar cartas parejas en una serie de cartas.")}
-            {Game(3, "Snake", "Juego realizado por alvaro ")}
+            {Game(3, "Snake", "El Snake es un videojuego lanzado a mediados de la década del 70 que ha mantenido su popularidad desde entonces, convirtiéndose en un clásico.")}
           </Grid>
         </Container>
       </main>
