@@ -1,3 +1,5 @@
+//Author: Alvaro Minguez
+//Description: Videojuego de snake 
 import React, { Component } from 'react';
 import Serpiente from './Component/Serpiente';
 import Fruta from './Component/Fruta';
